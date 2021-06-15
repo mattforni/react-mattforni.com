@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+div.Header {
+  border-bottom: 2px solid black;
+  display: flex;
+  padding: 5px;
+}
+
+div.SocialLink {
+  height: 25px;
+  margin: 5px;
+  width: 25px;
+}
+
+div.SocialLink:hover {
+  cursor: pointer;
+}
+
+div.SocialLink > img {
+  height: 100%;
+  width: 100%;
+}
