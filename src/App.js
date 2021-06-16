@@ -7,14 +7,10 @@ import LinkedInImage from './assets/social/linkedin.png';
 import StackOverflowImage from './assets/social/stackoverflow.png';
 
 class SocialLink extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="SocialLink" onClick={() => window.open(this.props.link, "_blank")}>
-        <img src={this.props.src} />
+        <img src={this.props.src} alt={this.props.name + " Image"} />
       </div>
     );
   }
