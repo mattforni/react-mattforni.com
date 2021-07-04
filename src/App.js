@@ -37,6 +37,9 @@ class Header extends React.Component {
   }
 }
 
+// Set the title of the document
+document.title = "mattforni.com";
+
 function App() {
   return (
     <div className="App">
