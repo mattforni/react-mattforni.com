@@ -9,26 +9,3 @@ html, body, div#root {
   height: 100%;
   text-align: center;
 }
-
-div.Header {
-  background-color: rgba(255, 255, 255, 0.8);
-  display: flex;
-  padding: 5px;
-}
-
-div.SocialLink {
-  border-bottom: 1px solid white;
-  height: 25px;
-  margin: 5px;
-  width: 25px;
-}
-
-div.SocialLink:hover {
-  border-bottom: 1px solid black;
-  cursor: pointer;
-}
-
-div.SocialLink > img {
-  height: 100%;
-  width: 100%;
-}

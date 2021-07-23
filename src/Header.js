@@ -1,7 +1,10 @@
 // Import social images
+import './Header.css';
 import GithubImage from './assets/social/github.png';
 import LinkedInImage from './assets/social/linkedin.png';
 import StackOverflowImage from './assets/social/stackoverflow.png';
+import { Link } from 'react-router-dom';
+
 
 const SocialLink = (props) => {
   return (
@@ -14,18 +17,32 @@ const SocialLink = (props) => {
 export const Header = () => {
   return (
     <div className="Header">
-      <SocialLink name="LinkedIn"
-        src={LinkedInImage}
-        link="https://www.linkedin.com/in/mattforni/"
-      />
-      <SocialLink name="Github"
-        src={GithubImage}
-        link="https://github.com/mattforni"
-      />
-      <SocialLink name="StackOverflow"
-        src={StackOverflowImage}
-        link="http://stackoverflow.com/users/2861181/mattforni"
-      />
+      <div className="SocialLinks">
+        <SocialLink name="LinkedIn"
+          src={LinkedInImage}
+          link="https://www.linkedin.com/in/mattforni/"
+        />
+        <SocialLink name="Github"
+          src={GithubImage}
+          link="https://github.com/mattforni"
+        />
+        <SocialLink name="StackOverflow"
+          src={StackOverflowImage}
+          link="http://stackoverflow.com/users/2861181/mattforni"
+        />
+      </div>
+      <div className="Navigation">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   );
 }
