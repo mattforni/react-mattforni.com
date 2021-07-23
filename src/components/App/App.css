@@ -3,7 +3,7 @@ html, body, div#root {
 }
 
 .App {
-  background-image: url("./assets/background.png");
+  background-image: url("../../assets/background.png");
   background-position: left top;
   background-size: cover;
   height: 100%;

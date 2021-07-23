@@ -1,10 +1,9 @@
-// Import social images
-import './Header.css';
-import GithubImage from './assets/social/github.png';
-import LinkedInImage from './assets/social/linkedin.png';
-import StackOverflowImage from './assets/social/stackoverflow.png';
 import { Link } from 'react-router-dom';
 
+import './Header.css';
+import GithubImage from '../../assets/social/github.png';
+import LinkedInImage from '../../assets/social/linkedin.png';
+import StackOverflowImage from '../../assets/social/stackoverflow.png';
 
 const SocialLink = (props) => {
   return (
@@ -14,7 +13,7 @@ const SocialLink = (props) => {
   );
 }
 
-export const Header = () => {
+const Header = () => {
   return (
     <div className="Header">
       <div className="SocialLinks">
@@ -43,3 +42,5 @@ export const Header = () => {
     </div>
   );
 }
+
+export default Header;
