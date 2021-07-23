@@ -7,6 +7,7 @@ import {
 import './App.scss';
 
 import Header from '../Header';
+import Home from '../Home';
 
 // Set the title of the document
 document.title = "mattforni.com";
@@ -17,7 +18,9 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/" />
+          <Route exact path="/">
+            <Home />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
