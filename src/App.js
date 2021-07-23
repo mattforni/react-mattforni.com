@@ -1,16 +1,52 @@
 import React from 'react';
 import './App.css';
 import { Header } from './Header.js';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 // Set the title of the document
 document.title = "mattforni.com";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Header />
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/" />
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
 
 export default App;
+
+const About = () => {
+  return (
+    <div>
+      <h1>
+        About
+      </h1>
+    </div>
+  );
+}
+
+const NotFound = () => {
+  return (
+    <div>
+      <h1>
+        Not Found
+      </h1>
+    </div>
+  )
+}
