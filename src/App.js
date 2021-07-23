@@ -16,8 +16,12 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
+          <Route exact path="/" />
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="*">
+            <NotFound />
           </Route>
         </Switch>
       </Router>
@@ -35,4 +39,14 @@ const About = () => {
       </h1>
     </div>
   );
+}
+
+const NotFound = () => {
+  return (
+    <div>
+      <h1>
+        Not Found
+      </h1>
+    </div>
+  )
 }
