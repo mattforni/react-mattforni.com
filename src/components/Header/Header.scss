@@ -1,0 +1,45 @@
+div.Header {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+
+  div.SocialLinks {
+    display: flex;
+
+    div.SocialLink {
+      border-bottom: 1px solid white;
+      height: 25px;
+      margin: 5px;
+      width: 25px;
+
+      &:hover {
+        border-bottom: 1px solid black;
+        cursor: pointer;
+      }
+
+      & > img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  div.Navigation {
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 5px;
+
+      li {
+        display: inline;
+        margin: 0px 5px;
+      }
+    }
+  }
+}

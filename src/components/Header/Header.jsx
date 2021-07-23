@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import './Header.css';
+import './Header.scss';
 import GithubImage from '../../assets/social/github.png';
 import LinkedInImage from '../../assets/social/linkedin.png';
 import StackOverflowImage from '../../assets/social/stackoverflow.png';
