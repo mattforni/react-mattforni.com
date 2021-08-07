@@ -6,6 +6,7 @@ import {
 
 import './App.scss';
 
+import About from '../About';
 import Header from '../Header';
 import Home from '../Home';
 
@@ -34,16 +35,6 @@ const App = () => {
 }
 
 export default App;
-
-const About = () => {
-  return (
-    <div>
-      <h1>
-        About
-      </h1>
-    </div>
-  );
-}
 
 const NotFound = () => {
   return (
