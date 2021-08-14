@@ -1,5 +1,10 @@
 # Considerations
 - Consider using [`yahoo-finance`](https://www.npmjs.com/package/yahoo-finance) for some investment analysis
+- Use the  [Strava API](https://developers.strava.com/docs/reference/)  to pull in activities
+- Use the  [Goodreads API](https://www.goodreads.com/api)  to pull in books
+- Use the  [Letterboxd API](http://api-docs.letterboxd.com/)  to pull in movies
+- Include your  [about README](https://github.com/mattforni/about)
+- Use the  [GitHub API](https://docs.github.com/en/rest)  to pull in commits
 
 # Getting Started with Create React App
 
