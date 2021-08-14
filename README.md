@@ -1,3 +1,6 @@
+# Considerations
+- Consider using [`yahoo-finance`](https://www.npmjs.com/package/yahoo-finance) for some investment analysis
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
