@@ -7,37 +7,39 @@ import StackOverflowImage from '../../assets/social/stackoverflow.png';
 
 const SocialLink = (props) => {
   return (
-    <div className="SocialLink" onClick={() => window.open(props.link, "_blank")}>
-      <img src={props.src} alt={props.name + " Image"} />
+    <div className='SocialLink' onClick={() => window.open(props.link, '_blank')}>
+      <img src={props.src} alt={props.name + ' Image'} />
     </div>
   );
 }
 
 const Header = () => {
   return (
-    <div className="Header">
-      <div className="SocialLinks">
-        <SocialLink name="LinkedIn"
+    <div className='Header'>
+      <div className='SocialLinks'>
+        <SocialLink name='LinkedIn'
           src={LinkedInImage}
-          link="https://www.linkedin.com/in/mattforni/"
-        />
-        <SocialLink name="Github"
+          link='https://www.linkedin.com/in/mattforni/'/>
+        <SocialLink name='Github'
           src={GithubImage}
-          link="https://github.com/mattforni"
-        />
-        <SocialLink name="StackOverflow"
+          link='https://github.com/mattforni'/>
+        <SocialLink name='StackOverflow'
           src={StackOverflowImage}
-          link="http://stackoverflow.com/users/2861181/mattforni"
-        />
+          link='http://stackoverflow.com/users/2861181/mattforni'/>
       </div>
-      <div className="Navigation">
+
+      <div className='Navigation'>
         <nav>
           <ul>
             <li>
-              <Link to="/">mattforni.com</Link>
+              <Link to='/activities'>Activities</Link>
             </li>
           </ul>
         </nav>
+      </div>
+
+      <div className='Wordmark'>
+        <Link to='/'>mattforni.com</Link>
       </div>
     </div>
   );
