@@ -2,46 +2,79 @@ import './Acitivites.scss';
 
 import github from "../../http/github";
 import {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
+
+const ACTIVITY_TYPE_GITHUB = 'GitHub';
 
 const Activities = () => {
+  const [activities, setActivities] = useState([])
+
   // Fetch all public events from Github on load
-  const [githubEvents, setGithubEvents] = useState(null)
+  const [githubSelected, setGithubSelected] = useState(true);
+  const [githubActivities, setGithubActivities] = useState(null)
   useEffect(() => {
     github.getPublicEvents()
       .then((response) => {
-        // Map each event to a GithubEvent component, then set the state
-        const githubEvents = response.data.map((event) => {
-          return <GithubEvent key={'GithubEvent-'+event.id} event={event}/>
+        // Map each event to a GithubActivity component, then set the state
+        const githubActivities = response.data.map((event) => {
+          return <GithubActivity key={'GithubEvent-'+event.id} activityType={ACTIVITY_TYPE_GITHUB} event={event}/>
         })
-        setGithubEvents(githubEvents)
+        setGithubActivities(githubActivities)
+        setActivities(activities.concat(githubActivities));
       })
   }, []);
 
   const isLoading = () => {
-    return githubEvents == null
+    return githubActivities == null
+  }
+
+  const handleGithubSelectChange = () => {
+    debugger;
+    const willBeSelected = !githubSelected
+    if (willBeSelected) {
+      setActivities(activities.concat(githubActivities))
+    } else {
+      setActivities(activities.filter(activity => activity.props.activityType !== ACTIVITY_TYPE_GITHUB))
+    }
+    setGithubSelected(willBeSelected)
   }
 
   return (
-    <div className="Activities">
-      {isLoading() &&
-        <div>
-          Loading ...
+    <div className='ActivitiesContainer'>
+      <div className='ActivitiesHeader'>
+        <div className='ActivitiesQuote'>
+          So much room for activities!
         </div>
-      }
-      {githubEvents}
+        <div className='ActivitiesSelect'>
+          <div className='ActivitiesSelectTitle'>
+            What activities would you like to see?
+          </div>
+          <div className='ActivitiesSelectCheckbox'>
+            <input type='checkbox' checked={githubSelected} onChange={handleGithubSelectChange}/>
+            GitHub
+          </div>
+        </div>
+      </div>
+
+      <div className="Activities">
+        {isLoading() &&
+          <div className='Loading'>
+            Loading ...
+          </div>
+        }
+        {!isLoading() && activities}
+      </div>
     </div>
   )
 }
 
-const GithubEvent = (props) => {
+const GithubActivity = (props) => {
   // Destructure event from props
   const { event } = props;
   // Destructure actor and repo from event
   const { actor, repo } = event;
 
   return (
-    <div className='GithubEvent'>
+    <div className='GithubActivity'>
       <div className='Timestamp'>
         {event.created_at}
       </div>
