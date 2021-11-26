@@ -4,6 +4,12 @@ html, body, div#root {
   height: 100%;
 }
 
+body {
+  background-image: url('../../assets/background.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 div.App {
   display: grid;
   grid-template-columns: $grid-navigation-width auto;

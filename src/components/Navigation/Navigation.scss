@@ -2,17 +2,18 @@
 
 nav.Navigation {
   align-items: stretch;
-  background-color: $color-gray-dark;
+  background-color: $color-white;
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
+  opacity: $opacity-ten;
   padding: $space-large;
 
   a {
-    color: $color-gray-light;
+    color: $color-black;
     &:hover {
-      color: $color-white;
+      color: $color-gray-dark;
     }
   }
   

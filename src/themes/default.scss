@@ -1,5 +1,6 @@
 // Define colors
 $color-black: #000;
+$color-blue-dark: #092340;
 $color-white: #fff;
 $color-gray: #797979;
 $color-gray-light: #b3b3b3;
@@ -17,7 +18,26 @@ $space-xxx-large: 75px;
 $size-normal: 1rem;
 $size-large: 1.5rem;
 
+// Define opacities
+$opacity-full: 1.0;
+$opacity-ten: 0.9;
+$opacity-quarter: 0.75;
+
 // Define grid properties
-$grid-navigation-width: 150px;
+$grid-navigation-width: 100px;
 $grid-header-height: $space-xx-large;
 $grid-title-height: $space-xxx-large;
+
+// Define polyfill mixins
+@mixin border-radius($radius: $space-small) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin linear-gradient($start-color-and-stop, $end-color-and-stop, $direction: to bottom) {
+  background-image: linear-gradient($direction, $start-color-and-stop, $end-color-and-stop);
+  background-image: -webkit-linear-gradient($direction, $start-color-and-stop, $end-color-and-stop);
+  background-image: -moz-linear-gradient($direction, $start-color-and-stop, $end-color-and-stop);
+  background-image: -ms-linear-gradient($direction, $start-color-and-stop, $end-color-and-stop);
+}
