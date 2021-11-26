@@ -7,7 +7,7 @@ html, body, div#root {
 div.App {
   display: grid;
   grid-template-columns: $grid-navigation-width auto;
-  grid-template-rows: $grid-header-height auto;
+  grid-template-rows: $grid-header-height $grid-header-height auto;
   column-gap: 0;
   row-gap: 0;
   height: 100%;
@@ -29,14 +29,23 @@ div.App {
   }
 
   nav.Navigation {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  div.Header {
+    grid-column-start: 1;
+    grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 2;
   }
 
   div.Content {
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
   }
 }

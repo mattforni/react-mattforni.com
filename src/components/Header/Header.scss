@@ -1,0 +1,31 @@
+@import '../../themes/default';
+
+div.Header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 $space-large;
+
+  div.Wordmark {
+  }
+
+  div.SocialLinks {
+    display: flex;
+
+    div.SocialLink {
+      border-bottom: 1px solid white;
+      height: $space-x-large;
+      margin: 0 $space-small;
+      width: $space-x-large;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      & > img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

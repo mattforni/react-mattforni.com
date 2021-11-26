@@ -11,6 +11,7 @@ $space-medium: 10px;
 $space-large: 15px;
 $space-x-large: 25px;
 $space-xx-large: 50px;
+$space-xxx-large: 75px;
 
 // Define sizes
 $size-normal: 1rem;
@@ -18,4 +19,5 @@ $size-large: 1.5rem;
 
 // Define grid properties
 $grid-navigation-width: 150px;
-$grid-header-height: 75px;
+$grid-header-height: $space-xx-large;
+$grid-title-height: $space-xxx-large;

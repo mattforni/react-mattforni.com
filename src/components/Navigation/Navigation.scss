@@ -15,17 +15,11 @@ nav.Navigation {
       color: $color-white;
     }
   }
-
-  div.Wordmark {
-    align-items: center;
-    display: flex;
-    min-height: $space-xx-large;
-  }
-
+  
   div.NavigationLinks {
     display: flex;
     flex: 4 2 65%;
-    padding: $space-x-large 0;
+    padding: $space-large 0;
     width: 100%;
 
     ul {
@@ -33,26 +27,6 @@ nav.Navigation {
 
       li {
         display: inline;
-      }
-    }
-  }
-
-  div.SocialLinks {
-    display: flex;
-
-    div.SocialLink {
-      border-bottom: 1px solid white;
-      height: $space-x-large;
-      margin: $space-small;
-      width: $space-x-large;
-
-      &:hover {
-        cursor: pointer;
-      }
-
-      & > img {
-        height: 100%;
-        width: 100%;
       }
     }
   }
