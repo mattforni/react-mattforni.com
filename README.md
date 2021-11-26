@@ -1,3 +1,7 @@
+# TODO
+- Merge the old website and the new website
+- Investigate grid layouts instead of flex
+- (Optional) Update the core layout to use a grid layout
 # Considerations
 - Consider using [`yahoo-finance`](https://www.npmjs.com/package/yahoo-finance) for some investment analysis
 - Use the  [Strava API](https://developers.strava.com/docs/reference/)  to pull in activities
