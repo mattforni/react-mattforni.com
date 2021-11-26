@@ -3,11 +3,9 @@
 div.Content {
   align-items: stretch;
   display: flex;
-  flex: 4;
   flex-direction: column;
   justify-content: stretch;
-  max-height: 100%;
-  overflow: scroll;
+  overflow: hidden;
 
   div.ContentTitle {
     align-items: center;
@@ -23,6 +21,7 @@ div.Content {
 
   div.ContentContainer {
     flex: 1 1 auto;
+    overflow: auto;
     padding: 0 $space-large $space-large $space-large;
   }
 }

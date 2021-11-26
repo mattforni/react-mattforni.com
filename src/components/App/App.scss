@@ -5,9 +5,12 @@ html, body, div#root {
 }
 
 div.App {
-  display: flex;
+  display: grid;
+  grid-template-columns: $grid-navigation-width auto;
+  grid-template-rows: $grid-header-height auto;
+  column-gap: 0;
+  row-gap: 0;
   height: 100%;
-  width: 100%;
 
   // Default all margin and padding to 0
   * {
@@ -23,5 +26,17 @@ div.App {
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  nav.Navigation {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  div.Content {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
 }
