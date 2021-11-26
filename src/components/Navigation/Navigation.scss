@@ -1,0 +1,59 @@
+nav.Navigation {
+  align-items: stretch;
+  background-color: #333;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 100%;
+  max-width: 100px;
+  padding: 15px;
+
+  a {
+    color: #b3b3b3;
+    &:hover {
+      color: #FFF;
+    }
+  }
+
+  div.Wordmark {
+    align-items: center;
+    display: flex;
+    min-height: 50px;
+  }
+
+  div.NavigationLinks {
+    display: flex;
+    flex: 4 2 65%;
+    padding: 25px 0;
+    width: 100%;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline;
+      }
+    }
+  }
+
+  div.SocialLinks {
+    display: flex;
+
+    div.SocialLink {
+      border-bottom: 1px solid white;
+      height: 25px;
+      margin: 5px;
+      width: 25px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      & > img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

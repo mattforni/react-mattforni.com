@@ -1,28 +1,12 @@
-div.ActivitiesContainer {
-  margin: 25px;
-
-  div.ActivitiesHeader {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+div.Activities {
+  div.ActivitiesSelect {
     margin-bottom: 25px;
-
-    div.ActivitiesQuote {
-      font-size: 2rem;
-      text-align: center;
-    }
-
-    div.ActivitiesSelect {
-      margin: 10px 0;
-      max-width: 500px;
-
-      div.ActivitiesSelectTitle {
-        margin-bottom: 10px;
-      }
+    div.ActivitiesSelectTitle {
+      margin-bottom: 10px;
     }
   }
 
-  div.Activities {
+  div.ActivitiesList {
     div.GithubActivity {
       display: flex;
       margin: 10px 0;

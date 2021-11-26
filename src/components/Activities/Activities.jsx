@@ -39,23 +39,18 @@ const Activities = () => {
   }
 
   return (
-    <div className='ActivitiesContainer'>
-      <div className='ActivitiesHeader'>
-        <div className='ActivitiesQuote'>
-          So much room for activities!
+    <div className='Activities'>
+      <div className='ActivitiesSelect'>
+        <div className='ActivitiesSelectTitle'>
+          What activities would you like to see?
         </div>
-        <div className='ActivitiesSelect'>
-          <div className='ActivitiesSelectTitle'>
-            What activities would you like to see?
-          </div>
-          <div className='ActivitiesSelectCheckbox'>
-            <input type='checkbox' checked={githubSelected} onChange={handleGithubSelectChange}/>
-            GitHub
-          </div>
+        <div className='ActivitiesSelectCheckbox'>
+          <input type='checkbox' checked={githubSelected} onChange={handleGithubSelectChange}/>
+          GitHub
         </div>
       </div>
 
-      <div className="Activities">
+      <div className="ActivitiesList">
         {isLoading() &&
           <div className='Loading'>
             Loading ...

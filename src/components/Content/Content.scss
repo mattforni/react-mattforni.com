@@ -1,0 +1,26 @@
+div.Content {
+  align-items: stretch;
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  justify-content: stretch;
+  max-height: 100%;
+  overflow: scroll;
+
+  div.ContentTitle {
+    align-items: center;
+    border-bottom: 1px solid #797979;
+    display: flex;
+    flex: 0 0 auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+    max-height: 50px;
+    min-height: 50px;
+    padding: 15px 15px 0 15px;
+  }
+
+  div.ContentContainer {
+    flex: 1 1 auto;
+    padding: 0 15px 15px 15px;
+  }
+}

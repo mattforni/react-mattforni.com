@@ -2,17 +2,15 @@ import {
   BrowserRouter as Router,
   Switch,
   Route
-} from "react-router-dom";
+} from 'react-router-dom';
 
 import './App.scss';
 
-import About from '../About';
-import Activities from "../Activities";
-import Header from '../Header';
-import Home from '../Home';
+import Content from "../Content";
+import Navigation from '../Navigation';
 
 // Set the title of the document
-document.title = "mattforni.com";
+document.title = 'mattforni.com';
 
 /**
  * App is the top-level component in this application.
@@ -20,23 +18,10 @@ document.title = "mattforni.com";
  */
 const App = () => {
   return (
-    <div className="App">
+    <div className='App'>
       <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/activities">
-            <Activities />
-          </Route>
-          <Route path="*">
-            <NotFound />
-          </Route>
-        </Switch>
+        <Navigation />
+        <Content />
       </Router>
     </div>
   );
@@ -44,16 +29,3 @@ const App = () => {
 
 export default App;
 
-/**
- * The NotFound component is displayed when the provided path has no match.
- * @returns {JSX.Element} A very simple component that indicates the route is not found.
- */
-const NotFound = () => {
-  return (
-    <div>
-      <h1>
-        Not Found
-      </h1>
-    </div>
-  )
-}
