@@ -1,2 +1,12 @@
+@import '../../themes/default';
+
 div.About {
+  div.AboutTitle {
+    div.AboutSubTitle {
+      font-variant: all-petite-caps;
+      &.Name {
+        font-size: $size-large;
+      }
+    }
+  }
 }

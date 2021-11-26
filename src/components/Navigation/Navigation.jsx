@@ -18,6 +18,9 @@ const Navigation = () => {
           <Link to='/'>Home</Link>
         </div>
         <div className='NavigationLink'>
+          <Link to='/about'>About</Link>
+        </div>
+        <div className='NavigationLink'>
           <Link to='/activities'>Activities</Link>
         </div>
       </div>

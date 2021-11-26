@@ -29,6 +29,9 @@ const Content = () => {
         <Route exact path='/'>
           <About />
         </Route>
+        <Route path='/about'>
+          <About />
+        </Route>
         <Route path='/activities'>
           <Activities />
         </Route>
