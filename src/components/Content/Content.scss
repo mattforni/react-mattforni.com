@@ -1,3 +1,5 @@
+@import '../../themes/default';
+
 div.Content {
   align-items: stretch;
   display: flex;
@@ -9,18 +11,18 @@ div.Content {
 
   div.ContentTitle {
     align-items: center;
-    border-bottom: 1px solid #797979;
+    border-bottom: 1px solid $color-gray;
     display: flex;
     flex: 0 0 auto;
-    font-size: 1.5rem;
+    font-size: $size-large;
     font-weight: bold;
-    max-height: 50px;
-    min-height: 50px;
-    padding: 15px 15px 0 15px;
+    max-height: $space-xx-large;
+    min-height: $space-xx-large;
+    padding: $space-large $space-large 0 $space-large;
   }
 
   div.ContentContainer {
     flex: 1 1 auto;
-    padding: 0 15px 15px 15px;
+    padding: 0 $space-large $space-large $space-large;
   }
 }
