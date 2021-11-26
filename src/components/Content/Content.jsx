@@ -27,28 +27,13 @@ const Content = () => {
     <div className='Content'>
       <Switch>
         <Route exact path='/'>
-          <div className='ContentTitle'>
-            About
-          </div>
-          <div className='ContentContainer'>
-            <About />
-          </div>
+          <About />
         </Route>
         <Route path='/activities'>
-          <div className='ContentTitle'>
-            Activities
-          </div>
-          <div className='ContentContainer'>
-            <Activities />
-          </div>
+          <Activities />
         </Route>
         <Route path='*'>
-          <div className='ContentTitle'>
-            Uh Oh
-          </div>
-          <div className='ContentContainer'>
-            <NotFound />
-          </div>
+          <NotFound />
         </Route>
       </Switch>
     </div>

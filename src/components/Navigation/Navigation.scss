@@ -4,7 +4,6 @@ nav.Navigation {
   align-items: stretch;
   background-color: $color-white;
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: space-between;
   opacity: $opacity-ten;
@@ -19,16 +18,10 @@ nav.Navigation {
   
   div.NavigationLinks {
     display: flex;
-    flex: 4 2 65%;
-    padding: $space-large 0;
-    width: 100%;
+    flex-direction: column;
 
-    ul {
-      list-style-type: none;
-
-      li {
-        display: inline;
-      }
+    div.NavigationLink {
+      margin-bottom: $space-medium;
     }
   }
 }

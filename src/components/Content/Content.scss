@@ -2,26 +2,11 @@
 
 div.Content {
   align-items: stretch;
+  background-color: $color-white;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  overflow: hidden;
-
-  div.ContentTitle {
-    align-items: center;
-    border-bottom: 1px solid $color-gray;
-    display: flex;
-    flex: 0 0 auto;
-    font-size: $size-large;
-    font-weight: bold;
-    max-height: $space-xx-large;
-    min-height: $space-xx-large;
-    padding: $space-large $space-large 0 $space-large;
-  }
-
-  div.ContentContainer {
-    flex: 1 1 auto;
-    overflow: auto;
-    padding: 0 $space-large $space-large $space-large;
-  }
+  opacity: $opacity-ten;
+  overflow: auto;
+  padding: $space-large 0;
 }

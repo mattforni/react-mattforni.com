@@ -14,13 +14,12 @@ const Navigation = () => {
   return (
     <nav className='Navigation' aria-label='main-navigation'>
       <div className='NavigationLinks'>
-        <nav>
-          <ul>
-            <li>
-              <Link to='/activities'>Activities</Link>
-            </li>
-          </ul>
-        </nav>
+        <div className='NavigationLink'>
+          <Link to='/'>Home</Link>
+        </div>
+        <div className='NavigationLink'>
+          <Link to='/activities'>Activities</Link>
+        </div>
       </div>
     </nav>
   );
