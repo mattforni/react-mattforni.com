@@ -1,12 +1,66 @@
 @import '../../themes/default';
 
 div.About {
-  div.AboutTitle {
-    div.AboutSubTitle {
-      font-variant: all-petite-caps;
-      &.Name {
-        font-size: $size-large;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+
+  div.HelloNameTag {
+    @include border-radius($space-medium);
+    @include box-shadow;
+    @include rotate(-15deg);
+    background-color: $color-red-dark;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    font-variant: all-petite-caps;
+    margin-bottom: $space-xxx-large;
+    max-height: 225px;
+    max-width: 350px;
+    padding-bottom: $space-large;
+    text-align: center;
+
+    div.HelloNameTagHeader {
+      font-size: $size-large;
+      padding-bottom: $space-large;
+
+      div.HelloNameTagSubHeader {
+        font-size: $size-normal;
       }
+    }
+
+    div.HelloNameTagName {
+      background-color: $color-white;
+      color: $color-black;
+      font-family: 'PermanentMarker';
+      font-size: $size-xx-large;
+      padding: 0 $space-xx-large;
+    }
+  }
+
+  div.AboutContent {
+    @include border-radius;
+    background-color: $color-white-with-opacity-half;
+    max-width: 600px;
+    padding: $space-large;
+
+    a {
+      @include text-shadow($color-black, 1px, 1px, 2px);
+      font-weight: bold;
+      &.LinkAmazon {
+        color: $color-orange-amazon;
+      }
+      &.LinkGremlin {
+        color: $color-green-gremlin;
+      }
+      &.LinkSalesforce {
+        color: $color-blue-salesforce;
+      }
+    }
+
+    p.QuoteEdwardAbbey {
+      font-style: italic;
     }
   }
 }

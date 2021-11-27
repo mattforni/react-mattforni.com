@@ -37,8 +37,6 @@ const SocialLink = (props) => {
 const Header = () => {
   return (
     <div className='Header'>
-      <Hamburger />
-
       <div className='SocialLinks'>
         <SocialLink name='LinkedIn'
                     src={LinkedInImage}

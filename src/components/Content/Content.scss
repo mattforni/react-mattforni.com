@@ -1,10 +1,9 @@
 @import '../../themes/default';
 
 div.Content {
-  align-items: stretch;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   overflow: auto;
-  padding: $space-large 0;
 }
