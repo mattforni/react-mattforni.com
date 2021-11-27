@@ -2,11 +2,9 @@
 
 div.Content {
   align-items: stretch;
-  background-color: $color-white;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
-  opacity: $opacity-ten;
   overflow: auto;
   padding: $space-large 0;
 }
