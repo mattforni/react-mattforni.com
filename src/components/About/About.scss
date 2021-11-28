@@ -42,6 +42,7 @@ div.About {
   div.AboutContent {
     @include border-radius;
     background-color: $color-white-with-opacity-half;
+    margin-bottom: $space-large;
     max-width: 600px;
     padding: $space-large;
 
@@ -60,6 +61,7 @@ div.About {
     }
 
     p.QuoteEdwardAbbey {
+      font-size: $size-small;
       font-style: italic;
     }
   }

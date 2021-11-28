@@ -26,7 +26,7 @@ const About = () => {
       <HelloNameTag />
       <div className='AboutContent'>
         <p>
-          Well ... kind of. My name is Matthew Fornaciari, but most everyone calls me Forni. I was born in the Bay Area, grew up in LA, studied in Providence, and have lived in in Seattle, San Francisco, and now Denver. I consider myself equal parts technologist and digital minimalist, which means that I try to spend as much time away from screens as I do in front of them.
+          Well ... kind of. My name is Matthew Fornaciari, but most everyone calls me Forni. I was born in the Bay Area, grew up in LA, studied in Providence, and have lived in Seattle, San Francisco, and now Denver. I consider myself equal parts technologist and digital minimalist, which means that I try to spend as much time away from screens as I do in front of them.
         </p>
         <br/>
         <p>
