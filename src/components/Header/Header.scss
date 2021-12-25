@@ -8,20 +8,6 @@ div.Header {
   justify-content: flex-end;
   padding: 0 $space-large;
 
-  div.Hamburger {
-    &:hover {
-      cursor: pointer;
-    }
-
-    div.HamburgerBar {
-      @include border-radius;
-      background-color: $color-white;
-      height: 2px;
-      margin: $space-small 0;
-      width: $space-x-large;
-    }
-  }
-
   div.SocialLinks {
     align-items: center;
     display: flex;

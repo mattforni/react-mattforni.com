@@ -21,6 +21,7 @@ $color-white: #fff;
 $color-white-with-opacity-half: rgba(255, 255, 255, $opacity-half);
 
 // Define spaces
+$space-x-small: 3px;
 $space-small: 5px;
 $space-medium: 10px;
 $space-large: 15px;
@@ -36,10 +37,16 @@ $size-large: 2.25rem;
 $size-x-large: 4rem;
 $size-xx-large: 6rem;
 
-// Define grid properties
-$grid-navigation-width: 100px;
-$grid-header-height: $space-xx-large;
-$grid-title-height: $space-xxx-large;
+// Define timings
+$timing-fast: 0.3s;
+$timing-normal: 1s;
+
+// Define layout properties
+$layout-content-width: 600px;
+$layout-navigation-width: 150px;
+$layout-navigation-index: 99;
+$layout-header-height: $space-xx-large;
+$layout-title-height: $space-xxx-large;
 
 // Define polyfill mixins
 @mixin border-radius($radius: $space-small) {
@@ -65,7 +72,6 @@ $grid-title-height: $space-xxx-large;
 @mixin rotate($degrees) {
   transform: rotate($degrees);
 }
-
 
 @mixin text-shadow($color: $color-black, $horizontal-offset: $space-small, $vertical-offset: $space-small, $blur-radius: $space-small) {
   text-shadow: $horizontal-offset $vertical-offset $blur-radius $color;
