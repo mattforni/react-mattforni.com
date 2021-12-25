@@ -1,14 +1,39 @@
 @import '../../themes/default';
 
 div.Activities {
-  div.ActivitiesSelect {
+  @include border-radius($space-medium);
+  background-color: $color-white-with-opacity-half;
+  margin: $space-large;
+  min-width: $layout-content-width;
+  padding: $space-large;
+
+  div.ActivitiesHeader {
     margin-bottom: $space-large;
-    div.ActivitiesSelectTitle {
-      margin-bottom: $space-medium;
+  }
+
+  div.ActivitiesSelect {
+    div.ActivitiesSelectCheckbox {
+      align-items: center;
+      display: flex;
+
+      label {
+        padding-left: $size-small;
+      }
     }
   }
 
   div.ActivitiesList {
+    div.ActivityDay {
+      &>:first-child {
+        margin-top: $space-large;
+      }
+      
+      div.ActivityDayDate {
+        border-bottom: 1px solid $color-black;
+        font-size: $size-medium;
+      }
+    }
+
     div.GithubActivity {
       display: flex;
       margin: $space-medium 0;

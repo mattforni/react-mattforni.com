@@ -4,7 +4,8 @@ div.About {
   align-items: center;
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  margin-bottom: $space-large;
+  max-width: $layout-content-width;
 
   div.HelloNameTag {
     @include border-radius($space-medium);
@@ -43,7 +44,7 @@ div.About {
     @include border-radius;
     background-color: $color-white-with-opacity-half;
     margin-bottom: $space-large;
-    max-width: 600px;
+    max-width: $layout-content-width;
     padding: $space-large;
 
     a {

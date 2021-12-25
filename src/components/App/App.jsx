@@ -8,6 +8,7 @@ import './App.scss';
 
 import Content from "../Content";
 import Header from "../Header";
+import Navigation from "../Navigation";
 
 // Set the title of the document
 document.title = 'mattforni.com';
@@ -20,6 +21,7 @@ const App = () => {
   return (
     <div className='App'>
       <Router>
+        <Navigation />
         <Header />
         <Content />
       </Router>

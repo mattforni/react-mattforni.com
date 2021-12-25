@@ -13,7 +13,7 @@ body {
 div.App {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: $grid-header-height auto;
+  grid-template-rows: $layout-header-height auto;
   column-gap: 0;
   row-gap: 0;
   height: 100%;

@@ -1,52 +1,113 @@
 import './Acitivites.scss';
 
 import github from "../../http/github";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from 'react';
+import moment from 'moment';
 
 const ACTIVITY_TYPE_GITHUB = 'GitHub';
 
 const Activities = () => {
-  const [activities, setActivities] = useState([])
+  // Create state for the high-level representation of activities as they related to days
+  const [activityDays, setActivityDays] = useState([])
+
+  // Create state for the types of activities that can be displayed
+  const [githubActivities, setGithubActivities] = useState(null);
+  const [githubSelected, setGithubSelected] = useState(true);
 
   // Fetch all public events from Github on load
-  const [githubSelected, setGithubSelected] = useState(true);
-  const [githubActivities, setGithubActivities] = useState(null)
   useEffect(() => {
     github.getPublicEvents()
       .then((response) => {
-        // Map each event to a GithubActivity component, then set the state
+        // Map each event to a GithubActivity component, then add the components to the activities
         const githubActivities = response.data.map((event) => {
-          return <GithubActivity key={'GithubEvent-'+event.id} activityType={ACTIVITY_TYPE_GITHUB} event={event}/>
+          return <GithubActivity key={'GithubEvent-'+event.id}
+                                 activityType={ACTIVITY_TYPE_GITHUB}
+                                 actor={event.actor}
+                                 date={moment.utc(event.created_at, "YYYY-MM-DDThh:mm:ssZ")}
+                                 repo={event.repo}
+                                 type={event.type}/>
         })
-        setGithubActivities(githubActivities)
-        setActivities(activities.concat(githubActivities));
+
+        // Add the github activities to list of activity days
+        addActivities(githubActivities)
+        // Set the list of github activities to indicate they have loaded
+        setGithubActivities(githubActivities);
       })
   }, []);
 
+  /**
+   * Returns whether the component is loading activities
+   *
+   * @returns {boolean} Whether the component is loading activities
+   */
   const isLoading = () => {
     return githubActivities == null
   }
 
+  /**
+   * Adds a list of activity components to the list of days
+   *
+   * @param activities The list of activity components to add
+   */
+  const addActivities = (activities) => {
+    setActivityDays(
+      Object.values(
+        activities.reduce((activityMap, activity) => {
+          const date = activity.props.date.format('YYYY-MM-DD');
+          if (!activityMap.hasOwnProperty(date)) {
+            activityMap[date] = <ActivityDay date={date} activities={[]}/>;
+          }
+          activityMap[date].props.activities.push(activity)
+          return activityMap
+        }, activityDays)
+      ).sort((activity1, activity2) => {
+        if (activity1.props.date === activity2.props.date) { return 0; }
+        if (activity1.props.date > activity2.props.date) { return -1; }
+        if (activity1.props.date < activity2.props.date) { return 1; }
+      })
+    )
+  }
+
+  /**
+   * Removes all activity components of the specified type from the list of days
+   *
+   * @param activities The the of activity components to remove
+   */
+  const removeActivities = (activityType) => {
+    const updatedActivityDays = [];
+    activityDays.map((activityDay) => {
+      const updatedActivities = activityDay.props.activities.filter((activity) => {
+        return activity.props.activityType !== activityType
+      });
+      if (updatedActivities.length > 0) {
+        updatedActivityDays.push(
+          <ActivityDay date={activityDay.props.date} activities={activityDay.props.activities}/>
+        )
+      }
+    })
+    setActivityDays(updatedActivityDays)
+  }
+
   const handleGithubSelectChange = () => {
-    debugger;
     const willBeSelected = !githubSelected
     if (willBeSelected) {
-      setActivities(activities.concat(githubActivities))
+      addActivities(githubActivities)
     } else {
-      setActivities(activities.filter(activity => activity.props.activityType !== ACTIVITY_TYPE_GITHUB))
+      removeActivities(ACTIVITY_TYPE_GITHUB)
     }
     setGithubSelected(willBeSelected)
   }
 
   return (
     <div className='Activities'>
+      <div className='ActivitiesHeader'>
+        These are a few of the things I do with my time when not working on Gremlin.
+      </div>
+
       <div className='ActivitiesSelect'>
-        <div className='ActivitiesSelectTitle'>
-          What activities would you like to see?
-        </div>
         <div className='ActivitiesSelectCheckbox'>
-          <input type='checkbox' checked={githubSelected} onChange={handleGithubSelectChange}/>
-          GitHub
+          <input type='checkbox' id='githubCheckbox' checked={githubSelected} onChange={handleGithubSelectChange}/>
+          <label for='githubCheckbox'>Github</label>
         </div>
       </div>
 
@@ -56,23 +117,33 @@ const Activities = () => {
             Loading ...
           </div>
         }
-        {!isLoading() && activities}
+        {!isLoading() && activityDays}
+      </div>
+    </div>
+  )
+}
+
+const ActivityDay = (props) => {
+  const { date, activities } = props;
+
+  return (
+    <div className='ActivityDay'>
+      <div className='ActivityDayDate'>
+        {date}
+      </div>
+      <div className='ActivityDayActivities'>
+        {activities}
       </div>
     </div>
   )
 }
 
 const GithubActivity = (props) => {
-  // Destructure event from props
-  const { event } = props;
-  // Destructure actor and repo from event
-  const { actor, repo } = event;
+  // Destructure actor, date, repo, and type from props
+  const { actor, date, repo, type } = props;
 
   return (
     <div className='GithubActivity'>
-      <div className='Timestamp'>
-        {event.created_at}
-      </div>
       <div className='Actor'>
         <img src={actor.avatar_url} alt={actor.login+'-avatar'}/>
         <div className='ActorLogin'>
@@ -80,11 +151,11 @@ const GithubActivity = (props) => {
         </div>
       </div>
       <div className='EventType'>
-        {event.type}
+        {type}
       </div>
       <div className="Repository">
-        <a href={event.repo.url} target='_blank'>
-          {event.repo.name}
+        <a href={repo.url} target='_blank'>
+          {repo.name}
         </a>
       </div>
     </div>
