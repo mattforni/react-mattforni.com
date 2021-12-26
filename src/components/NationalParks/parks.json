@@ -1,0 +1,273 @@
+[
+  {
+    "name": "Acadia",
+    "date_established": "1919-02-26"
+  },
+  {
+    "name": "American Samoa",
+    "date_established": "1988-10-31"
+  },
+  {
+    "name": "Arches",
+    "date_established": "1971-11-12",
+    "date_visited": "2021-02-15"
+  },
+  {
+    "name": "Badlands",
+    "date_established": "1978-11-10"
+  },
+  {
+    "name": "Big Bend",
+    "date_established": "1944-06-12"
+  },
+  {
+    "name": "Biscayne",
+    "date_established": "1980-06-28"
+  },
+  {
+    "name": "Black Canyon of the Gunnison",
+    "date_established": "1999-10-21",
+    "date_visited": "2021-10-21"
+  },
+  {
+    "name": "Bryce Canyon",
+    "date_established": "1928-02-25",
+    "date_visited": "2019-09-21"
+  },
+  {
+    "name": "Canyonlands",
+    "date_established": "1964-09-12",
+    "date_visited": "2021-12-08"
+  },
+  {
+    "name": "Capitol Reef",
+    "date_established": "1971-12-18",
+    "date_visited": "2021-12-09"
+  },
+  {
+    "name": "Carlsbad Caverns",
+    "date_established": "1930-05-14"
+  },
+  {
+    "name": "Channel Islands",
+    "date_established": "1980-04-05",
+    "date_visited": "2021-12-18"
+  },
+  {
+    "name": "Congaree",
+    "date_established": "2003-11-10"
+  },
+  {
+    "name": "Crater Lake",
+    "date_established": "1902-05-22",
+    "date_visited": "2020-08-03"
+  },
+  {
+    "name": "Cuyahoga Valley",
+    "date_established": "2020-10-11"
+  },
+  {
+    "name": "Death Valley",
+    "date_established": "1994-10-31",
+    "date_visited": "2019-09-15"
+  },
+  {
+    "name": "Denali",
+    "date_established": "1917-02-26"
+  },
+  {
+    "name": "Dry Tortugas",
+    "date_established": "1992-10-26"
+  },
+  {
+    "name": "Everglades",
+    "date_established": "1934-05-30"
+  },
+  {
+    "name": "Gates of the Arctic",
+    "date_established": "1980-12-02"
+  },
+  {
+    "name": "Gateway Arch",
+    "date_established": "2018-02-22"
+  },
+  {
+    "name": "Glacier",
+    "date_established": "1910-05-11",
+    "date_visited": "2020-10-01"
+  },
+  {
+    "name": "Glacier Bay",
+    "date_established": "1980-12-02"
+  },
+  {
+    "name": "Grand Canyon",
+    "date_established": "1919-02-26",
+    "date_visited": "2019-09-17"
+  },
+  {
+    "name": "Grand Teton",
+    "date_established": "1929-02-26",
+    "date_visited": "2020-10-30"
+  },
+  {
+    "name": "Great Basin",
+    "date_established": "1986-10-27"
+  },
+  {
+    "name": "Great Sand Dunes",
+    "date_established": "2004-09-24",
+    "date_visited": "2021-06-12"
+  },
+  {
+    "name": "Great Smoky Mountains",
+    "date_established": "1934-06-15"
+  },
+  {
+    "name": "Guadalupe Mountains",
+    "date_established": "1966-10-15"
+  },
+  {
+    "name": "Haleakala",
+    "date_established": "1961-07-01"
+  },
+  {
+    "name": "Hawai'i Volcanoes",
+    "date_established": "1916-08-01"
+  },
+  {
+    "name": "Hot Springs",
+    "date_established": "1921-03-04"
+  },
+  {
+    "name": "Indiana Dunes",
+    "date_established": "2019-02-15"
+  },
+  {
+    "name": "Isle Royale",
+    "date_established": "1940-04-03"
+  },
+  {
+    "name": "Joshua Tree",
+    "date_established": "1994-10-31",
+    "date_visited": "2017-04-29"
+  },
+  {
+    "name": "Katmai",
+    "date_established": "1980-12-02"
+  },
+  {
+    "name": "Kenai Fjords",
+    "date_established": "1980-12-02"
+  },
+  {
+    "name": "Kings Canyon",
+    "date_established": "1940-03-04"
+  },
+  {
+    "name": "Kobuk Valley",
+    "date_established": "1980-12-02"
+  },
+  {
+    "name": "Lake Clark",
+    "date_established": "1980-12-02"
+  },
+  {
+    "name": "Lassen Volcanic",
+    "date_established": "1916-08-09",
+    "date_visited": "2020-08-01"
+  },
+  {
+    "name": "Mammoth Cave",
+    "date_established": "1941-07-1"
+  },
+  {
+    "name": "Mesa Verde",
+    "date_established": "1906-06-29",
+    "date_visited": "2021-10-18"
+  },
+  {
+    "name": "Mount Rainer",
+    "date_established": "1899-03-2"
+  },
+  {
+    "name": "New River Gorge",
+    "date_established": "2020-12-27"
+  },
+  {
+    "name": "North Cascades",
+    "date_established": "1968-10-02"
+  },
+  {
+    "name": "Olympic",
+    "date_established": "1938-06-29"
+  },
+  {
+    "name": "Petrified Forest",
+    "date_established": "1962-12-09"
+  },
+  {
+    "name": "Pinnacles",
+    "date_established": "2013-01-10"
+  },
+  {
+    "name": "Redwood",
+    "date_established": "1968-10-02"
+  },
+  {
+    "name": "Rocky Mountain",
+    "date_established": "1915-01-26",
+    "date_visited": "2020-11-08"
+  },
+  {
+    "name": "Saguaro",
+    "date_established": "1994-10-14"
+  },
+  {
+    "name": "Sequoia",
+    "date_established": "1890-09-25"
+  },
+  {
+    "name": "Shenandoah",
+    "date_established": "1935-12-26"
+  },
+  {
+    "name": "Theodore Roosevelt",
+    "date_established": "1978-11-10"
+  },
+  {
+    "name": "Virgin Islands",
+    "date_established": "1956-08-02"
+  },
+  {
+    "name": "Voyageurs",
+    "date_established": "1975-04-08"
+  },
+  {
+    "name": "White Sands",
+    "date_established": "2019-12-20"
+  },
+  {
+    "name": "Wind Cave",
+    "date_established": "1903-01-09"
+  },
+  {
+    "name": "Wrangell-St. Elias",
+    "date_established": "1980-12-02"
+  },
+  {
+    "name": "Yellowstone",
+    "date_established": "1872-03-01",
+    "date_visited": "2020-10-10"
+  },
+  {
+    "name": "Yosemite",
+    "date_established": "1890-10-01",
+    "date_visited": "2019-06-15"
+  },
+  {
+    "name": "Zion",
+    "date_established": "1919-11-19",
+    "date_visited": "2019-09-19"
+  }
+]

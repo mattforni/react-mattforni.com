@@ -3,6 +3,7 @@ import {Route, Switch} from "react-router-dom";
 import './Content.scss';
 import About from "../About";
 import Activities from "../Activities";
+import NationalParks from "../NationalParks";
 
 /**
  * The NotFound component is displayed when the provided path has no match.
@@ -27,13 +28,16 @@ const Content = () => {
     <div className='Content'>
       <Switch>
         <Route exact path='/'>
-          <About />
+          <About/>
         </Route>
         <Route path='/activities'>
-          <Activities />
+          <Activities/>
+        </Route>
+        <Route path='/national-parks'>
+          <NationalParks/>
         </Route>
         <Route path='*'>
-          <NotFound />
+          <NotFound/>
         </Route>
       </Switch>
     </div>

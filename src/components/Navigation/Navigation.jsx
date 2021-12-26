@@ -19,10 +19,13 @@ const Navigation = () => {
           <div className='NavigationLink'>
             <Link to='/activities'>Activities</Link>
           </div>
+          <div className='NavigationLink'>
+            <Link to='/national-parks'>National Parks</Link>
+          </div>
         </div>
       </nav>
     </div>
-  );
+  )
 }
 
 export default Navigation;
