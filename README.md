@@ -6,6 +6,7 @@
 # Considerations
 - Consider using [`yahoo-finance`](https://www.npmjs.com/package/yahoo-finance) for some investment analysis
 - Create a National Park visitation page to experiment with visualization libraries
+- Include the best time of year to visit each national park
 - Use the  [Strava API](https://developers.strava.com/docs/reference/)  to pull in activities
 - Use the  [Goodreads API](https://www.goodreads.com/api)  to pull in books
 - Use the  [Letterboxd API](http://api-docs.letterboxd.com/)  to pull in movies
